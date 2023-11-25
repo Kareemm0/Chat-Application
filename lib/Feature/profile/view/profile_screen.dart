@@ -1,4 +1,5 @@
 import 'package:chat_app/Feature/Chat/view/chat.dart';
+import 'package:chat_app/Feature/profile/notifications/notification.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -23,6 +24,16 @@ class ProfileScreen extends StatelessWidget {
             },
             leading: const Icon(Icons.chat_outlined),
             title: const Text("Chats"),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                NotificationScreen.routeName,
+              );
+            },
+            leading: const Icon(Icons.notifications),
+            title: const Text("Notifications"),
           )
         ],
       ),

@@ -4,7 +4,6 @@ import 'package:chat_app/Feature/Auth/register/view/register.dart';
 import 'package:chat_app/Feature/profile/view/profile_screen.dart';
 import 'package:chat_app/core/function/snak_bar.dart';
 import 'package:chat_app/core/function/vaildator_function.dart';
-import 'package:chat_app/core/utils/app_router.dart';
 import 'package:chat_app/core/utils/app_string.dart';
 import 'package:chat_app/core/widget/custom_auth_title.dart';
 import 'package:chat_app/core/widget/custom_image.dart';
@@ -12,7 +11,6 @@ import 'package:chat_app/core/widget/custom_row_text.dart';
 import 'package:chat_app/core/widget/custom_text_form_filed.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class LoginScreen extends StatefulWidget {
