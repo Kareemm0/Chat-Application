@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routName: (context) => const LoginScreen(),
         RegisterScreen.routName: (context) => const RegisterScreen(),
-        ChatScreen.routName: (context) => ChatScreen(),
+        ChatScreen.routName: (context) => const ChatScreen(),
         ProfileScreen.routName: (context) => const ProfileScreen(),
         NotificationScreen.routeName: (context) => const NotificationScreen(
               title: "Notifications",
@@ -51,3 +51,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+//TODO : i try so many time to solve this problem 

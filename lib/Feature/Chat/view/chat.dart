@@ -1,19 +1,27 @@
 import 'package:chat_app/Feature/Chat/models/message_model.dart';
 import 'package:chat_app/Feature/Chat/view/widget/custom_chat_widget.dart';
+import 'package:chat_app/core/function/notification_function.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatelessWidget {
+class ChatScreen extends StatefulWidget {
   static const routName = "/ChatScreen";
 
+  const ChatScreen({super.key});
+
+  @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+
   CollectionReference messages =
       FirebaseFirestore.instance.collection('messages');
+
   TextEditingController controller = TextEditingController();
 
   final scrollController = ScrollController();
-
-  ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +61,9 @@ class ChatScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(16),
                     child: TextField(
+                      onTap: () {
+                        notification(context);
+                      },
                       controller: controller,
                       onSubmitted: (data) {
                         messages.add({
